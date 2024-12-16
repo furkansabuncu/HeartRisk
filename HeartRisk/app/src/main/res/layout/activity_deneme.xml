@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhichModel">
+
+    <!-- Header Layout'ı dahil etme -->
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView ile içerik ekranı -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footerLayout">
+
+        <!-- İçerik -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Model Seçimi Başlık -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lütfen bir model seçin"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+            <!-- Model Seçimi İçin İki Sütun -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:paddingTop="16dp">
+
+                <!-- Sol Model -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:background="@drawable/ic_launcher_foreground">
+
+                    <!-- Model 1 Görseli -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/kalpicon"
+                        android:contentDescription="Model 1" />
+
+                    <!-- Model 1 Bilgisi -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="           Bilimsel Model\n\n• Yaş (Age): Kullanıcının yaşı\n• Cinsiyet (Sex): Kullanıcının cinsiyeti\n• Göğüs ağrısı türü (cp): Göğüs ağrısının tipi (örneğin, tip 1, tip 2 vs.)\n• Kan Basıncı (trtbps): Kullanıcının dinlenme kan basıncı\n• Kolesterol (chol): Kullanıcının kanındaki kolesterol seviyesi\n• Açlık Kan Şekeri (fbs): Kullanıcının açlık kan şekeri (genellikle 120 mg/dl'yi geçerse, 1 = yüksek)\n• Elektrokardiyogram (restecg): Dinlenme sırasında elektrokardiyogram (ECG) durumu\n• Maksimum Kalp Hızı (thalachh): Kullanıcının maksimum kalp hızı\n• Egzersiz Toleransı (exng): Egzersiz sırasında kalp ağrısı durumu (1 = evet, 0 = hayır)\n• ST depresyonu (oldpeak): Egzersiz sırasında ST depresyonunun derinliği\n• Eğilim (slp): Egzersiz sonrası ST segment eğilimi (yukarı, düz veya aşağı)\n• Koroner Arter Hastalığı (caa): Kullanıcının koroner arter hastalığına sahip olup olmadığı\n• Thalassemia (thall): Thalassemia durumu (normal, ters, veya sınıflandırılmamış)\n• Sonuç (output): Kalp hastalığı durumu (1 = hastalık var, 0 = hastalık yok)"
+                        android:textSize="14sp"
+                        android:gravity="start"
+                        android:paddingTop="8dp"
+                        android:lineSpacingExtra="4dp"/>
+
+
+                    <!-- Seçim Butonu -->
+                    <Button
+                        android:id="@+id/selectModel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seç"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- Sağ Model -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:background="@drawable/ic_launcher_foreground">
+
+                    <!-- Model 2 Görseli -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/kalpicon"
+                        android:contentDescription="Model 2" />
+
+                    <!-- Model 2 Bilgisi -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Model \n\n\n\n\n\n\n\n\n\n - ÇOK YAKINDA
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:paddingTop="8dp"/>
+
+                    <!-- Seçim Butonu -->
+                    <Button
+                        android:id="@+id/selectModel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seç"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Footer Layout'ı dahil etme -->
+    <include
+        layout="@layout/footer_layout"
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/kalpicon"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header Layout'ı dahil etme -->
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView ile içerik ekranı -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footerLayout">
+
+        <!-- İçerik -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Yaş -->
+            <EditText
+                android:id="@+id/ageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Yaş"
+                android:inputType="number" />
+
+            <!-- Cinsiyet -->
+            <EditText
+                android:id="@+id/sexEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cinsiyet (1 = Erkek, 0 = Kadın)"
+                android:inputType="number" />
+
+            <!-- Göğüs Ağrısı Türü -->
+            <EditText
+                android:id="@+id/cpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Göğüs Ağrısı Türü"
+                android:inputType="number" />
+
+            <!-- Kan Basıncı -->
+            <EditText
+                android:id="@+id/trtbpsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kan Basıncı"
+                android:inputType="number" />
+
+            <!-- Kolesterol -->
+            <EditText
+                android:id="@+id/cholEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kolesterol"
+                android:inputType="number" />
+
+            <!-- Açlık Kan Şekeri -->
+            <EditText
+                android:id="@+id/fbsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Açlık Kan Şekeri (1 = Yüksek, 0 = Normal)"
+                android:inputType="number" />
+
+            <!-- Elektrokardiyogram -->
+            <EditText
+                android:id="@+id/restecgEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Elektrokardiyogram Durumu"
+                android:inputType="number" />
+
+            <!-- Maksimum Kalp Hızı -->
+            <EditText
+                android:id="@+id/thalachhEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Maksimum Kalp Hızı"
+                android:inputType="number" />
+
+            <!-- Egzersiz ile Angina -->
+            <EditText
+                android:id="@+id/exngEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Egzersiz ile Angina (1 = Evet, 0 = Hayır)"
+                android:inputType="number" />
+
+            <!-- Egzersizle Depresyon -->
+            <EditText
+                android:id="@+id/oldpeakEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Egzersizle Depresyon"
+                android:inputType="numberDecimal" />
+
+            <!-- ST Segmenti Eğimi -->
+            <EditText
+                android:id="@+id/slpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ST Segmenti Eğimi"
+                android:inputType="number" />
+
+            <!-- Koroner Arter Hastalığı -->
+            <EditText
+                android:id="@+id/caaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Koroner Arter Hastalığı"
+                android:inputType="number" />
+
+            <!-- Thalassemia -->
+            <EditText
+                android:id="@+id/thallEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thalassemia"
+                android:inputType="number" />
+
+            <!-- Modeli Çalıştıracak Button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tahmin Yap"
+                android:onClick="onPredictClick" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Footer Layout'ı dahil etme -->
+    <include
+        layout="@layout/footer_layout"
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/kalpicon"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
