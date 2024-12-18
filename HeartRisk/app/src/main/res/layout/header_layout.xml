@@ -15,13 +15,13 @@
         app:popupTheme="@style/AppTheme.PopupOverlay"
         app:theme="@style/AppTheme.Toolbar">
 
-        <!-- Sadece başlık ve resmin düzenini yerleştireceğiz -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp">
 
+            <!-- Header'da resmin yer alacağı ImageView -->
             <ImageView
                 android:id="@+id/accessibility_custom_action_3"
                 android:layout_width="50dp"
@@ -30,14 +30,25 @@
                 android:layout_alignParentTop="true"
                 android:src="@drawable/kalpicon" />
 
+            <!-- Başlık metnini tutacak TextView -->
             <TextView
                 android:id="@+id/accessibility_custom_action_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
-                android:text="KalpDostun"
+                android:text="HeartRisk"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
+
+            <!-- Google Sign-In Butonu -->
+            <Button
+                android:id="@+id/google_sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Sign in with Google"
+                android:visibility="gone" /> <!-- Giriş yapılmadığında görünür -->
 
         </RelativeLayout>
 

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "927108766881",
+    "project_id": "heartrisk-7c04a",
+    "storage_bucket": "heartrisk-7c04a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927108766881:android:e94b9ee58ce0f4e15e64e0",
+        "android_client_info": {
+          "package_name": "com.furkansabuncu.heartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927108766881-70jtotq9e097q047inkkuktijqdr77h2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.furkansabuncu.heartapp",
+            "certificate_hash": "dbb0b87b80901b40d2c48ed82f534d1f3857338f"
+          }
+        },
+        {
+          "client_id": "927108766881-mbfq9tjc95hb537tlrv7ios8mi96ub7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgnfox-vAADe3KIC7qaXtyv88w_LflHK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927108766881-mbfq9tjc95hb537tlrv7ios8mi96ub7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,10 +13,25 @@
         android:theme="@style/Theme.HeartApp"
         tools:targetApi="31">
         <activity
-            android:name=".WhichModel"
+            android:name=".AddArticle"
+            android:exported="false" />
+        <activity
+            android:name=".MainPage"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GoodResult"
+            android:exported="false" />
+        <activity
+            android:name=".BadResult"
+            android:exported="false" />
+        <activity
+            android:name=".WhichModel"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

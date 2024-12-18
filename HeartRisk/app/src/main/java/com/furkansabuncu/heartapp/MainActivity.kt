@@ -1,9 +1,10 @@
 package com.furkansabuncu.heartapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.furkansabuncu.heartapp.databinding.ActivityMainBinding
@@ -18,13 +19,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var interpreter: Interpreter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // EditText'leri bağlayalım
 
         // Modeli yükle
         val model = loadModelFile()
@@ -48,6 +46,10 @@ class MainActivity : AppCompatActivity() {
                 binding.slpEditText.text.toString().toFloat(),
                 binding.caaEditText.text.toString().toFloat(),
                 binding.thallEditText.text.toString().toFloat()
+
+
+
+
             )
 
             // JSON dosyasından verileri ölçeklendir
@@ -59,6 +61,10 @@ class MainActivity : AppCompatActivity() {
             // Çıktı dizisini oluştur (1x1 boyutunda)
             val output = Array(1) { FloatArray(1) } // Modelden 1 sayı dönecek
 
+            // Sonucu "Sonuç hesaplanıyor..." olarak göster
+            binding.resultTextView.text = "Sonuç hesaplanıyor..."
+            binding.resultTextView.setVisibility(View.VISIBLE)
+
             // Tahmin yap
             interpreter.run(byteBuffer, output)
 
@@ -67,7 +73,21 @@ class MainActivity : AppCompatActivity() {
 
             // Sonucu ekranda göster
             val result = if (output[0][0] > 0.5) "Daha yüksek kalp krizi riski" else "Daha düşük kalp krizi riski"
+
+            // Sonuç gösterildiği mesajı
             Toast.makeText(this, "Tahmin Sonucu: $result", Toast.LENGTH_LONG).show()
+
+            // 3 saniye bekle ve ardından sonuca göre işlem yap
+            Handler().postDelayed({
+                // "Sonuç hesaplanıyor..." mesajını gizle
+                binding.resultTextView.setVisibility(View.GONE)
+
+                // Kötü sonuç ise kötü sonuç ekranına yönlendir
+                if (output[0][0] > 0.5) {
+                    val intent = Intent(this, BadResult::class.java)
+                    startActivity(intent)
+                }
+            }, 3000) // 3 saniye bekleme
         }
     }
 
