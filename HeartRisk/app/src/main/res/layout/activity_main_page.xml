@@ -45,7 +45,7 @@
                 app:contentPadding="12dp">
 
                 <LinearLayout
-                    android:id="@+id/kisayolEkleClick"
+                    android:id="@+id/kisayolEkleClick1"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -53,7 +53,7 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/yerekleme" />
+                        android:src="@drawable/heart" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -63,7 +63,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
                             android:text="Yer ekle"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
@@ -73,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/ic_arrow_forward_black_24dp" />
+                            android:src="@drawable/rightarrow" />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -90,7 +89,7 @@
                 app:contentPadding="12dp">
 
                 <LinearLayout
-                    android:id="@+id/kisayolEkleClick"
+                    android:id="@+id/kisayolEkleClick2"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -98,7 +97,7 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/yerekleme" />
+                        android:src="@drawable/heart" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -108,7 +107,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
                             android:text="Yer ekle"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
@@ -118,7 +116,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/ic_arrow_forward_black_24dp" />
+                            android:src="@drawable/rightarrow" />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -134,7 +132,7 @@
                 app:contentPadding="12dp">
 
                 <LinearLayout
-                    android:id="@+id/kisayolEkleClick"
+                    android:id="@+id/kisayolEkleClick3"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -142,7 +140,8 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/yerekleme" />
+                        android:src="@drawable/heart" />
+
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -152,7 +151,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
                             android:text="Yer ekle"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
@@ -162,7 +160,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/ic_arrow_forward_black_24dp" />
+                            android:src="@drawable/rightarrow" />
+
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -178,7 +177,7 @@
                 app:contentPadding="12dp">
 
                 <LinearLayout
-                    android:id="@+id/kisayolEkleClick"
+                    android:id="@+id/kisayolEkleClick4"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -186,7 +185,9 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/yerekleme" />
+                        android:src="@drawable/heart" />
+
+                    />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -196,7 +197,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
                             android:text="Yer ekle"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
@@ -206,7 +206,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/ic_arrow_forward_black_24dp" />
+                            android:src="@drawable/rightarrow" />
+
+                        />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -245,7 +247,7 @@
                 android:weightSum="100">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
+                    android:id="@+id/cardView1aa"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -257,13 +259,13 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView1"
+                            android:id="@+id/imageView12"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/iconum" />
+                            android:src="@drawable/kalpicon" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -274,10 +276,9 @@
                             android:padding="8dp">
 
                             <TextView
-                                android:id="@+id/yeradi1"
+                                android:id="@+id/yeradi1aa"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
                                 android:text="Yer adları buraya"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
@@ -289,11 +290,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/sehir1"
+                                    android:id="@+id/sehir1ae"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:fontFamily="@font/calibri"
                                     android:text="sehir buraya"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
@@ -303,7 +303,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="20"
-                                    android:src="@drawable/ic_favorite_red_24dp"
+                                    android:src="@drawable/kalpicon"
                                     android:visibility="gone" />
                             </LinearLayout>
 
@@ -332,7 +332,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/iconum" />
+                            android:src="@drawable/kalpicon" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -346,7 +346,6 @@
                                 android:id="@+id/yeradi1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
                                 android:text="Yer adları buraya"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
@@ -362,7 +361,6 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:fontFamily="@font/calibri"
                                     android:text="sehir buraya"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
@@ -372,7 +370,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="20"
-                                    android:src="@drawable/ic_favorite_red_24dp"
+                                    android:src="@drawable/kalpicon"
                                     android:visibility="gone" />
                             </LinearLayout>
                         </LinearLayout>
@@ -389,7 +387,7 @@
                 android:weightSum="100">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
+                    android:id="@+id/cardView2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -401,13 +399,13 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView1"
+                            android:id="@+id/imageView2"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/iconum" />
+                            android:src="@drawable/kalpicon" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -418,10 +416,9 @@
                             android:padding="8dp">
 
                             <TextView
-                                android:id="@+id/yeradi1"
+                                android:id="@+id/yeradi2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
                                 android:text="Yer adları buraya"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
@@ -433,11 +430,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/sehir1"
+                                    android:id="@+id/sehir2"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:fontFamily="@font/calibri"
                                     android:text="sehir buraya"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
@@ -447,7 +443,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="20"
-                                    android:src="@drawable/ic_favorite_red_24dp"
+                                    android:src="@drawable/kalpicon"
                                     android:visibility="gone" />
                             </LinearLayout>
 
@@ -458,7 +454,7 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
+                    android:id="@+id/cardView3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -470,13 +466,13 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView1"
+                            android:id="@+id/imageView3"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/iconum" />
+                            android:src="@drawable/kalpicon" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -487,10 +483,9 @@
                             android:padding="8dp">
 
                             <TextView
-                                android:id="@+id/yeradi1"
+                                android:id="@+id/yeradi3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
                                 android:text="Yer adları buraya"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
@@ -502,11 +497,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/sehir1"
+                                    android:id="@+id/sehir3"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:fontFamily="@font/calibri"
                                     android:text="sehir buraya"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
@@ -516,7 +510,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="20"
-                                    android:src="@drawable/ic_favorite_red_24dp"
+                                    android:src="@drawable/kalpicon"
                                     android:visibility="gone" />
                             </LinearLayout>
                         </LinearLayout>
@@ -534,7 +528,7 @@
                 android:weightSum="100">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
+                    android:id="@+id/cardView1a"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -546,13 +540,13 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView1"
+                            android:id="@+id/imageView1a"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/iconum" />
+                            android:src="@drawable/kalpicon" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -563,10 +557,9 @@
                             android:padding="8dp">
 
                             <TextView
-                                android:id="@+id/yeradi1"
+                                android:id="@+id/yeradi1a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
                                 android:text="Yer adları buraya"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
@@ -578,11 +571,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/sehir1"
+                                    android:id="@+id/sehir1a"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:fontFamily="@font/calibri"
                                     android:text="sehir buraya"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
@@ -592,7 +584,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="20"
-                                    android:src="@drawable/ic_favorite_red_24dp"
+                                    android:src="@drawable/kalpicon"
                                     android:visibility="gone" />
                             </LinearLayout>
 
@@ -603,7 +595,7 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
+                    android:id="@+id/cardView4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -615,13 +607,13 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView1"
+                            android:id="@+id/imageView4"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/iconum" />
+                            android:src="@drawable/kalpicon" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -632,10 +624,9 @@
                             android:padding="8dp">
 
                             <TextView
-                                android:id="@+id/yeradi1"
+                                android:id="@+id/yeradi4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
                                 android:text="Yer adları buraya"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
@@ -647,11 +638,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/sehir1"
+                                    android:id="@+id/sehir4"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:fontFamily="@font/calibri"
                                     android:text="sehir buraya"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
@@ -661,7 +651,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="20"
-                                    android:src="@drawable/ic_favorite_red_24dp"
+                                    android:src="@drawable/kalpicon"
                                     android:visibility="gone" />
                             </LinearLayout>
                         </LinearLayout>

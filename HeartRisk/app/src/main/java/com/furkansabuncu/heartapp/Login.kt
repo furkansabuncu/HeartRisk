@@ -6,20 +6,35 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import android.content.Intent
 import android.widget.EditText
+import com.furkansabuncu.heartapp.databinding.ActivityLoginBinding
+
 
 class Login : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
 
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         auth = FirebaseAuth.getInstance()
 
         // Google ile giriş butonu ve kodu kaldırıldı
         // Google giriş yerine sadece e-posta ve şifre ile giriş yapacağız
+
+        binding.kayitButton.setOnClickListener {
+            startActivity(Intent(this, Register::class.java))
+            finish()
+        }
     }
+
+
+
+
 
     // Email ve şifre ile giriş
     fun giris(view: android.view.View) {
