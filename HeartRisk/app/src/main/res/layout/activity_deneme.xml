@@ -59,7 +59,7 @@
                     android:orientation="vertical"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:background="@drawable/ic_launcher_foreground">
+                    >
 
                     <!-- Model 1 Görseli -->
                     <ImageView
@@ -86,7 +86,9 @@
                         android:layout_height="wrap_content"
                         android:text="Seç"
                         android:layout_marginTop="8dp"
-                        android:gravity="center" />
+                        android:gravity="center"
+                        android:backgroundTint="@color/my_blue"
+                        />
                 </LinearLayout>
 
                 <!-- Sağ Model -->
@@ -97,7 +99,7 @@
                     android:orientation="vertical"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:background="@drawable/ic_launcher_foreground">
+                    >
 
                     <!-- Model 2 Görseli -->
                     <ImageView
@@ -123,7 +125,9 @@
                         android:layout_height="wrap_content"
                         android:text="Seç"
                         android:layout_marginTop="8dp"
-                        android:gravity="center" />
+                        android:gravity="center"
+                        android:backgroundTint="@color/my_blue"
+                        />
                 </LinearLayout>
 
             </LinearLayout>
@@ -147,10 +151,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:contentDescription="TODO"
-        android:src="@drawable/kalpicon"
+        android:src="@drawable/heart"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

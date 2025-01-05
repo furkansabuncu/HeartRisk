@@ -1,19 +1,29 @@
 package com.furkansabuncu.heartapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.furkansabuncu.heartapp.databinding.ActivityMainPageBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
 class MainPage : AppCompatActivity() {
 
+    lateinit var binding : ActivityMainPageBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main_page)
+
+        val binding = ActivityMainPageBinding.inflate(layoutInflater)
+        val view : View= binding.root
+        setContentView(view)
+
+
 
         // Kenar boşluklarını yönetmek için sistem çubuğu dinleyicisi
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -24,6 +34,14 @@ class MainPage : AppCompatActivity() {
 
         // Firebase'den verileri çek ve arayüze bağla
         fetchAndBindData()
+
+        binding.footerLayout.section1Line.setVisibility(View.VISIBLE);
+
+        binding.mainButton.setOnClickListener{
+            val intent = Intent(this@MainPage,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun fetchAndBindData() {

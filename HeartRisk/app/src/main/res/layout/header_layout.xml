@@ -10,12 +10,14 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:background="@color/my_blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         app:theme="@style/AppTheme.Toolbar">
 
         <RelativeLayout
+            android:background="@color/my_blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -32,6 +34,7 @@
 
             <!-- Başlık metnini tutacak TextView -->
             <TextView
+                android:background="@color/my_blue"
                 android:id="@+id/accessibility_custom_action_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

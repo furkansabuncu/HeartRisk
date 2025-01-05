@@ -1,10 +1,13 @@
 package com.furkansabuncu.heartapp
 
+import android.R
 import android.content.Intent
+import android.opengl.Visibility
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.furkansabuncu.heartapp.databinding.ActivityMainBinding
@@ -29,12 +32,80 @@ class MainActivity : AppCompatActivity() {
         val options = Interpreter.Options()
         interpreter = Interpreter(model, options)
 
+
+        val genderOptions = listOf("Erkek", "Kadın")
+        val adapter = ArrayAdapter(this, R.layout.simple_spinner_item, genderOptions)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.sexSpinner.adapter = adapter
+
+
+        binding.footerLayout.section4.setOnClickListener{
+            val intent = Intent(this@MainActivity,Profile::class.java)
+            startActivity(intent)
+            binding.footerLayout.section1Line.visibility = View.GONE  // Bileşeni tamamen gizler
+
+            finish()
+        }
+
+
+
+        binding.cpInfoIcon.setOnClickListener {
+            showExplanationDialog("Göğüs ağrısı tipi: 0 = Tipik angina, 1 = Atipik angina, 2 = Non-anginal ağrı, 3 = Semptomsuz.")
+        }
+
+        binding.trtbpsInfoIcon.setOnClickListener {
+            showExplanationDialog("Dinlenme kan basıncı (mmHg cinsinden).")
+        }
+
+        binding.cholInfoIcon.setOnClickListener {
+            showExplanationDialog("Serum kolesterol değeri (mg/dl cinsinden).")
+        }
+
+        binding.fbsInfoIcon.setOnClickListener {
+            showExplanationDialog("Açlık kan şekeri (>120 mg/dl): 1 = True, 0 = False.")
+        }
+
+        binding.restecgInfoIcon.setOnClickListener {
+            showExplanationDialog("Dinlenme elektrokardiyografisi sonuçları: 0 = Normal, 1 = Anormal, 2 = Hipertrofi.")
+        }
+
+        binding.thalachhInfoIcon.setOnClickListener {
+            showExplanationDialog("Maksimum kalp hızı.")
+        }
+
+        binding.exngInfoIcon.setOnClickListener {
+            showExplanationDialog("Egzersiz sonrası angina: 1 = Var, 0 = Yok.")
+        }
+
+        binding.oldpeakInfoIcon.setOnClickListener {
+            showExplanationDialog("Egzersizle ilişkili ST depresyonu.")
+        }
+
+        binding.slpInfoIcon.setOnClickListener {
+            showExplanationDialog("Egzersiz sırasında eğim: 0 = Düz, 1 = Yukarı eğimli, 2 = Aşağı eğimli.")
+        }
+
+        binding.caaInfoIcon.setOnClickListener {
+            showExplanationDialog("Floroskopi ile tespit edilen majör damar sayısı (0-3 arasında).")
+        }
+
+        binding.thallInfoIcon.setOnClickListener {
+            showExplanationDialog("Thal değerleri: 0 = Normal, 1 = Düzeltilemez kusur, 2 = Reversibl kusur.")
+        }
+
+
+
+
         // Butona tıklama olayını ekleyelim
         binding.submitButton.setOnClickListener {
+
+            val selectedGender = binding.sexSpinner.selectedItem.toString()
+            val genderValue = if (selectedGender == "Erkek") 0f else 1f
+
             // Giriş verilerini alalım
             val inputData = floatArrayOf(
                 binding.ageEditText.text.toString().toFloat(),
-                binding.sexEditText.text.toString().toFloat(),
+                genderValue,
                 binding.cpEditText.text.toString().toFloat(),
                 binding.trtbpsEditText.text.toString().toFloat(),
                 binding.cholEditText.text.toString().toFloat(),
@@ -46,9 +117,6 @@ class MainActivity : AppCompatActivity() {
                 binding.slpEditText.text.toString().toFloat(),
                 binding.caaEditText.text.toString().toFloat(),
                 binding.thallEditText.text.toString().toFloat()
-
-
-
 
             )
 
@@ -87,8 +155,14 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, BadResult::class.java)
                     startActivity(intent)
                 }
+                else if(output[0][0] < 0.5){
+                    val intent = Intent(this, GoodResult::class.java)
+                    startActivity(intent)
+                }
             }, 3000) // 3 saniye bekleme
         }
+
+
     }
 
     // Model dosyasını yükleyen fonksiyon
@@ -146,4 +220,15 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         interpreter.close()
     }
+    // Açıklama göstermek için bir fonksiyon ekle
+    private fun showExplanationDialog(explanation: String) {
+        val builder = android.app.AlertDialog.Builder(this)
+        builder.setTitle("Açıklama")
+        builder.setMessage(explanation)
+        builder.setPositiveButton("Tamam") { dialog, _ ->
+            dialog.dismiss() // Kullanıcı "Tamam" dediğinde dialogu kapat
+        }
+        builder.create().show()
+    }
+
 }

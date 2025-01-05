@@ -8,20 +8,23 @@ import android.content.Intent
 import android.widget.EditText
 import com.furkansabuncu.heartapp.databinding.ActivityLoginBinding
 
-
 class Login : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         auth = FirebaseAuth.getInstance()
+
+        // Kullanıcı zaten giriş yapmışsa direkt yönlendir
+        if (auth.currentUser != null) {
+            startActivity(Intent(this, WhichModel::class.java))
+            finish()
+        }
 
         // Google ile giriş butonu ve kodu kaldırıldı
         // Google giriş yerine sadece e-posta ve şifre ile giriş yapacağız
@@ -31,10 +34,6 @@ class Login : AppCompatActivity() {
             finish()
         }
     }
-
-
-
-
 
     // Email ve şifre ile giriş
     fun giris(view: android.view.View) {
@@ -51,7 +50,7 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Giriş başarılı
                     val user = auth.currentUser
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, WhichModel::class.java))
                     finish()
                 } else {
                     // Giriş başarısız

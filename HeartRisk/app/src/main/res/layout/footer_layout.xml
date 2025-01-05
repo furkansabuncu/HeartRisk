@@ -17,7 +17,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
         <!-- İlk Bölüm -->
         <LinearLayout
             android:id="@+id/section1"
@@ -28,9 +27,18 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/section1image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/kalpicon" />
+                android:src="@drawable/homeselected" />
+
+            <!-- Alt Çizgi -->
+            <View
+                android:id="@+id/section1_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#2596BE"
+                android:visibility="gone" />
         </LinearLayout>
 
         <!-- Dikey Çizgi -->
@@ -49,9 +57,18 @@
             android:gravity="center">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/kalpicon" />
+                android:id="@+id/section2image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/read" />
+
+            <!-- Alt Çizgi -->
+            <View
+                android:id="@+id/section2_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#2596BE"
+                android:visibility="gone" />
         </LinearLayout>
 
         <!-- Dikey Çizgi -->
@@ -70,9 +87,18 @@
             android:gravity="center">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/kalpicon" />
+                android:id="@+id/section3image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add" />
+
+            <!-- Alt Çizgi -->
+            <View
+                android:id="@+id/section3_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#2596BE"
+                android:visibility="gone" />
         </LinearLayout>
 
         <!-- Dikey Çizgi -->
@@ -91,12 +117,20 @@
             android:gravity="center">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/kalpicon" />
+                android:id="@+id/section4image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile" />
+
+            <!-- Alt Çizgi -->
+            <View
+                android:id="@+id/section4_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#2596BE"
+
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

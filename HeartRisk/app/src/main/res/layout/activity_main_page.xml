@@ -53,7 +53,7 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/heart" />
+                        android:src="@drawable/ask" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yer ekle"
+                            android:text="Tahmin yap"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
 
@@ -97,7 +97,7 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/heart" />
+                        android:src="@drawable/homeselected" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yer ekle"
+                            android:text="Anasayfa"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
 
@@ -140,7 +140,7 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/heart" />
+                        android:src="@drawable/exercise" />
 
 
                     <RelativeLayout
@@ -151,7 +151,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yer ekle"
+                            android:text="Yazılar"
                             android:textColor="#3C3C3C"
                             android:textSize="16sp" />
 
@@ -687,10 +687,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/kalpicon"
+        android:src="@drawable/heart"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,105 +41,299 @@
                 android:layout_height="wrap_content"
                 android:hint="Yaş"
                 android:inputType="number" />
+            <TextView
+                android:id="@+id/sexLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cinsiyet Seçiniz:"
+                android:textSize="16sp" />
 
             <!-- Cinsiyet -->
-            <EditText
-                android:id="@+id/sexEditText"
+            <Spinner
+                android:id="@+id/sexSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Cinsiyet (1 = Erkek, 0 = Kadın)"
-                android:inputType="number" />
+                android:layout_marginTop="8dp"
+                android:spinnerMode="dropdown" />
+
 
             <!-- Göğüs Ağrısı Türü -->
-            <EditText
-                android:id="@+id/cpEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Göğüs Ağrısı Türü"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <EditText
+                    android:id="@+id/cpEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Göğüs Ağrısı Türü"
+                    android:inputType="number" />
+                <ImageView
+                    android:id="@+id/cpInfoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Göğüs ağrısı türü hakkında bilgi"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onInfoClick" />
+            </LinearLayout>
 
             <!-- Kan Basıncı -->
-            <EditText
-                android:id="@+id/trtbpsEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kan Basıncı"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <EditText
+                    android:id="@+id/trtbpsEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Kan Basıncı"
+                    android:inputType="number" />
+                <ImageView
+                    android:id="@+id/trtbpsInfoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Kan basıncı hakkında bilgi"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onInfoClick" />
+            </LinearLayout>
 
             <!-- Kolesterol -->
-            <EditText
-                android:id="@+id/cholEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kolesterol"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <EditText
+                    android:id="@+id/cholEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Kolesterol"
+                    android:inputType="number" />
+                <ImageView
+                    android:id="@+id/cholInfoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Kolesterol hakkında bilgi"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onInfoClick" />
+            </LinearLayout>
 
             <!-- Açlık Kan Şekeri -->
-            <EditText
-                android:id="@+id/fbsEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Açlık Kan Şekeri (1 = Yüksek, 0 = Normal)"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/fbsEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Açlık Kan Şekeri (1 = Yüksek, 0 = Normal)"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/fbsInfoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Açlık Kan Şekeri Soru" />
+            </LinearLayout>
 
             <!-- Elektrokardiyogram -->
-            <EditText
-                android:id="@+id/restecgEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Elektrokardiyogram Durumu"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/restecgEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Elektrokardiyogram Durumu"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/restecgInfoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Elektrokardiyogram Soru" />
+            </LinearLayout>
 
             <!-- Maksimum Kalp Hızı -->
-            <EditText
-                android:id="@+id/thalachhEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Maksimum Kalp Hızı"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/thalachhEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Maksimum Kalp Hızı"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/thalachhInfoIcon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Maksimum Kalp Hızı Soru" />
+            </LinearLayout>
 
             <!-- Egzersiz ile Angina -->
-            <EditText
-                android:id="@+id/exngEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Egzersiz ile Angina (1 = Evet, 0 = Hayır)"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/exngEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Egzersiz ile Angina (1 = Evet, 0 = Hayır)"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/exngInfoIcon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Egzersiz ile Angina Soru" />
+            </LinearLayout>
 
             <!-- Egzersizle Depresyon -->
-            <EditText
-                android:id="@+id/oldpeakEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Egzersizle Depresyon"
-                android:inputType="numberDecimal" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/oldpeakEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Egzersizle Depresyon"
+                    android:inputType="numberDecimal" />
+
+                <ImageView
+                    android:id="@+id/oldpeakInfoIcon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Egzersizle Depresyon Soru" />
+            </LinearLayout>
 
             <!-- ST Segmenti Eğimi -->
-            <EditText
-                android:id="@+id/slpEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ST Segmenti Eğimi"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/slpEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="ST Segmenti Eğimi"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/slpInfoIcon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="ST Segmenti Eğimi Soru" />
+            </LinearLayout>
 
             <!-- Koroner Arter Hastalığı -->
-            <EditText
-                android:id="@+id/caaEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Koroner Arter Hastalığı"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/caaEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Koroner Arter Hastalığı"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/caaInfoIcon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Koroner Arter Hastalığı Soru" />
+            </LinearLayout>
 
             <!-- Thalassemia -->
-            <EditText
-                android:id="@+id/thallEditText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Thalassemia"
-                android:inputType="number" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/thallEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Thalassemia"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/thallInfoIcon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ask"
+                    android:contentDescription="Thalassemia Soru" />
+            </LinearLayout>
 
             <!-- Modeli Çalıştıracak Button -->
             <Button
+                android:backgroundTint="@color/my_blue"
                 android:id="@+id/submitButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -176,10 +370,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:contentDescription="TODO"
-        android:src="@drawable/kalpicon"
+        android:src="@drawable/heartselected"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
