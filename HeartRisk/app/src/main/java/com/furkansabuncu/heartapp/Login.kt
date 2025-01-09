@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import android.content.Intent
 import android.widget.EditText
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.furkansabuncu.heartapp.databinding.ActivityLoginBinding
+import kotlin.concurrent.thread
 
 class Login : AppCompatActivity() {
 

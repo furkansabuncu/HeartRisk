@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Arka plan rengi -->
+    <item android:drawable="@color/colorPrimary" />
+
+    <!-- Ortada bir logo göstermek için -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/kalpicon" />
+    </item>
+</layer-list>

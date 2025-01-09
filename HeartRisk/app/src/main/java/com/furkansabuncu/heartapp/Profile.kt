@@ -39,6 +39,20 @@ class Profile : AppCompatActivity() {
         binding.mainButton.setOnClickListener {
             // Ana eylem butonuna tıklanabilir aksiyon ekleyebilirsin (örneğin, kalp sağlığına dair öneriler vb.)
         }
+
+        binding.footerLayout.section4Line.visibility=View.VISIBLE
+
+        binding.footerLayout.section1.setOnClickListener{
+            val intent  = Intent(this@Profile, MainPage::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.mainButton.setOnClickListener{
+            val intent = Intent(this@Profile, WhichModel::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun getUserProfile(email: String) {

@@ -46,51 +46,145 @@ class MainActivity : AppCompatActivity() {
 
             finish()
         }
+        binding.footerLayout.section1.setOnClickListener{
+            val intent = Intent(this@MainActivity,MainPage::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
 
         binding.cpInfoIcon.setOnClickListener {
-            showExplanationDialog("Göğüs ağrısı tipi: 0 = Tipik angina, 1 = Atipik angina, 2 = Non-anginal ağrı, 3 = Semptomsuz.")
+            showExplanationDialog("Tipik Angina (0):\n" +
+                    "\n" +
+                    "Göğüste sıkışma, ağırlık hissi.\n" +
+                    "Ağrı kola, çeneye veya sırta yayılabilir.\n" +
+                    "Fiziksel aktivite veya stresle tetiklenir.\n" +
+                    "Atipik Angina (1):\n" +
+                    "\n" +
+                    "Belirsiz göğüs rahatsızlığı.\n" +
+                    "Yanma veya hazımsızlık hissi.\n" +
+                    "Genellikle net bir tetikleyici yoktur.\n" +
+                    "Non-anginal Ağrı (2):\n" +
+                    "\n" +
+                    "Keskin veya batıcı göğüs ağrısı.\n" +
+                    "Sürekli bir ağrı olabilir.\n" +
+                    "Dinlenme ya da fiziksel aktiviteyle ilişkili olmayabilir.\n" +
+                    "Semptomsuz (3):\n" +
+                    "\n" +
+                    "Hiçbir göğüs ağrısı veya rahatsızlık hissi yoktur.\n" +
+                    "Sessiz iskemi olarak da bilinir, genellikle başka testlerle tespit edilir.")
         }
 
         binding.trtbpsInfoIcon.setOnClickListener {
-            showExplanationDialog("Dinlenme kan basıncı (mmHg cinsinden).")
+            showExplanationDialog("Dinlenme kan basıncı (mmHg cinsinden)." +
+                    "Dinlenme sırasında ölçülen kan basıncı, kalbinizin ve damarlarınızın genel sağlığı hakkında bilgi verir." +
+                    "Gerçekçi girişler genelde 70 - 180 mmHg arasında olacaktır.\n" +
+                    "\n")
         }
 
         binding.cholInfoIcon.setOnClickListener {
-            showExplanationDialog("Serum kolesterol değeri (mg/dl cinsinden).")
+            showExplanationDialog("Serum Kolesterol (mg/dL)\n" +
+                    "Serum kolesterol, kanda toplam kolesterol seviyesini ifade eder ve kalp-damar hastalıkları riskini değerlendirmek için kullanılır.\n" +
+                    "\n" +
+                    "Kullanıcının Girebileceği Aralık\n" +
+                    "Genel Aralık: 100 - 400 mg/dL\n" +
+                    "(Gerçekçi değerler bu aralıkta yer alır.)")
         }
 
         binding.fbsInfoIcon.setOnClickListener {
-            showExplanationDialog("Açlık kan şekeri (>120 mg/dl): 1 = True, 0 = False.")
+            showExplanationDialog("Açlık Kan Şekeri (mg/dL) > 120 mg/dl), 1 = True, 0 = False\n" +
+                    "Açlık kan şekeri, bireyin en az 8 saatlik açlık sonrası ölçülen kan şekeri seviyesidir. Diyabet ve insülin direnci gibi durumların tanısında kullanılır.\n" +
+                    "\n" +
+                    "Kullanıcının Girebileceği Aralık\n" +
+                    "Genel Aralık: 50 - 300 mg/dL\n" +
+                    "(Bu aralık, hem normal hem de anormal değerleri kapsamaktadır.)" +
+                    "> 120 mg/dl), 1 = True, 0 = False")
         }
 
         binding.restecgInfoIcon.setOnClickListener {
-            showExplanationDialog("Dinlenme elektrokardiyografisi sonuçları: 0 = Normal, 1 = Anormal, 2 = Hipertrofi.")
+            showExplanationDialog("Dinlenme sırasında kaydedilen EKG, kalp ritmi ve elektriksel aktivitesini değerlendirmek için kullanılır. İşte kısa açıklamalar:\n" +
+                    "\n" +
+                    "0 = Normal\n" +
+                    "\n" +
+                    "Tanım: Kalp ritmi ve elektriksel aktivite normaldir.\n" +
+                    "Belirti: Hiçbir anormal semptom yoktur.\n" +
+                    "1 = Anormal\n" +
+                    "\n" +
+                    "Tanım: Kalp ritmi veya elektriksel iletimde bozukluklar vardır.\n" +
+                    "Belirti: Düzensiz kalp atışı, göğüs ağrısı, nefes darlığı.\n" +
+                    "2 = Hipertrofi\n" +
+                    "\n" +
+                    "Tanım: Kalp kaslarının özellikle sol ventrikülün kalınlaşması.\n" +
+                    "Belirti: Çabuk yorulma, çarpıntı, göğüs ağrısı.")
         }
 
         binding.thalachhInfoIcon.setOnClickListener {
-            showExplanationDialog("Maksimum kalp hızı.")
+            showExplanationDialog("Maksimum kalp hızı, egzersiz sırasında kalbin ulaşabileceği en yüksek hızdır. Genellikle, yaşa bağlı olarak hesaplanır.\n" +
+                    "\n" +
+                    "Hesaplama Yöntemi\n" +
+                    "En yaygın hesaplama, 220 - yaş formülüne dayanır. Örneğin, 30 yaşındaki bir kişi için maksimum kalp hızı:\n" +
+                    "\n" +
+                    "220 - 30 = 190 bpm (dakika başına atım).")
         }
 
         binding.exngInfoIcon.setOnClickListener {
-            showExplanationDialog("Egzersiz sonrası angina: 1 = Var, 0 = Yok.")
+            showExplanationDialog("Egzersiz sırasında veya sonrasında ortaya çıkan göğüs ağrısı veya sıkışma hissi, kalp sağlığıyla ilgili önemli bir belirti olabilir. Angina, kalp kasına yeterli oksijen gitmemesi nedeniyle meydana gelir.\n" +
+                    "\n" +
+                    "1 = Var (Egzersiz Sonrası Angina Var)\n" +
+                    "\n" +
+                    "Tanım: Egzersiz sonrası göğüste ağrı, sıkışma veya baskı hissi oluşur. Bu durum genellikle kalp damarlarının daralması veya tıkanmasıyla ilişkilidir.\n" +
+                    "Belirtiler: Göğüste ağrı, nefes darlığı, yorgunluk, çarpıntı.\n" +
+                    "Önem: Kalp hastalıklarının erken belirtisi olabilir, tıbbi değerlendirme gerektirir.\n" +
+                    "0 = Yok (Egzersiz Sonrası Angina Yok)\n" +
+                    "\n" +
+                    "Tanım: Egzersiz sonrası göğüs ağrısı veya rahatsızlık hissi yoktur.\n" +
+                    "Belirtiler: Göğüste ağrı veya rahatsızlık yoktur, kişi egzersiz sonrası rahat hissedebilir.\n" +
+                    "Önem: Normal bir durumdur, ancak uzun süreli izleme gerekebilir.")
         }
 
         binding.oldpeakInfoIcon.setOnClickListener {
-            showExplanationDialog("Egzersizle ilişkili ST depresyonu.")
+            showExplanationDialog("gzersizle İlişkili ST Depresyonu için genellikle şu değerler girilebilir:\n" +
+                    "\n" +
+                    "0 = Yok (ST depresyonu yok)\n" +
+                    "Tanım: Egzersiz sırasında ST segmentinde herhangi bir depresyon (aşağıya kayma) gözlemlenmez, yani kalp kası yeterli oksijeni alır.\n" +
+                    "1 = Var (ST depresyonu var)\n" +
+                    "Tanım: Egzersiz sırasında ST segmentinde depresyon gözlemlenir, bu da kalbin oksijen ihtiyacını karşılamakta zorlandığını ve potansiyel olarak kalp damarlarında daralma veya tıkanıklık olabileceğini gösterir.")
         }
 
         binding.slpInfoIcon.setOnClickListener {
-            showExplanationDialog("Egzersiz sırasında eğim: 0 = Düz, 1 = Yukarı eğimli, 2 = Aşağı eğimli.")
+            showExplanationDialog("Egzersiz sırasında eğim, kalbin elektriksel aktivitesindeki değişiklikleri değerlendiren bir parametredir ve genellikle EKG ile ölçülür. Bu eğim, kalbin çalışma durumu hakkında bilgi verir.\n" +
+                    "\n" +
+                    "0 = Düz\n" +
+                    "Tanım: ST segmenti düz, yani yukarı veya aşağı doğru bir kayma yoktur. Kalp normal bir şekilde çalışıyor olabilir.\n" +
+                    "1 = Yukarı Eğilimli\n" +
+                    "Tanım: ST segmenti yukarı doğru kayar. Bu, kalbin oksijen ihtiyacını karşılamakta zorlanmadığını, ancak bazen kalp yükü arttığında gözlemlenebilir.\n" +
+                    "2 = Aşağı Eğilimli\n" +
+                    "Tanım: ST segmenti aşağı doğru kayar. Bu durum genellikle kalp damarlarında tıkanıklık veya daralma belirtisi olabilir, çünkü kalp egzersiz sırasında yeterli oksijeni alamayabilir.")
         }
 
         binding.caaInfoIcon.setOnClickListener {
-            showExplanationDialog("Floroskopi ile tespit edilen majör damar sayısı (0-3 arasında).")
+            showExplanationDialog("Floroskopi, damarlar ve kalp yapıları hakkında bilgi veren bir görüntüleme yöntemidir. Bu yöntem, damarların durumunu ve olası tıkanıklıkları görmek için kullanılır. Özellikle kalp hastalıklarının değerlendirilmesinde faydalıdır.\n" +
+                    "\n" +
+                    "Değerler\n" +
+                    "0 = Yok: Majör damarlarında herhangi bir tıkanıklık veya daralma tespit edilmemiştir.\n" +
+                    "1 = Bir Damar: Bir majör damarda tıkanıklık veya daralma tespit edilmiştir.\n" +
+                    "2 = İki Damar: İki majör damarda tıkanıklık veya daralma tespit edilmiştir.\n" +
+                    "3 = Üç Damar: Üç majör damarda tıkanıklık veya daralma tespit edilmiştir.")
         }
 
         binding.thallInfoIcon.setOnClickListener {
-            showExplanationDialog("Thal değerleri: 0 = Normal, 1 = Düzeltilemez kusur, 2 = Reversibl kusur.")
+            showExplanationDialog("Thal değerleri, kalp kasının oksijen alımı ve kan akışı ile ilgili anormallikleri değerlendiren bir parametredir. Thalium, genellikle kalp stresi testi sırasında kullanılır ve bu testte kalp kasının geçici veya kalıcı oksijen eksikliği durumları belirlenebilir.\n" +
+                    "\n" +
+                    "0 = Normal\n" +
+                    "\n" +
+                    "Tanım: Kalp kası normal şekilde oksijen alıyor, herhangi bir anormallik yok.\n" +
+                    "1 = Düzeltilemez Kusur\n" +
+                    "\n" +
+                    "Tanım: Kalp kasında kalıcı bir hasar veya oksijen eksikliği vardır. Damar tıkanıklığı veya kalp kası hasarı nedeniyle bu durum düzeltilemez.\n" +
+                    "2 = Reversibl Kusur\n" +
+                    "\n" +
+                    "Tanım: Kalp kasında geçici bir oksijen eksikliği veya hasar vardır. Bu durum, tedavi veya diğer iyileşme yöntemleriyle düzeltilebilir.")
         }
 
 
@@ -143,7 +237,6 @@ class MainActivity : AppCompatActivity() {
             val result = if (output[0][0] > 0.5) "Daha yüksek kalp krizi riski" else "Daha düşük kalp krizi riski"
 
             // Sonuç gösterildiği mesajı
-            Toast.makeText(this, "Tahmin Sonucu: $result", Toast.LENGTH_LONG).show()
 
             // 3 saniye bekle ve ardından sonuca göre işlem yap
             Handler().postDelayed({

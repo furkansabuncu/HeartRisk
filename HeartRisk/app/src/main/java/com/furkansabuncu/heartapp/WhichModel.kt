@@ -27,6 +27,17 @@ class WhichModel : AppCompatActivity() {
             finish()  // Eğer mevcut aktiviteyi bitirmek istiyorsanız, doğru şekilde kullanılmış.
         }
 
+        binding.footerLayout.section1.setOnClickListener{
+            val intent = Intent(this@WhichModel,MainPage::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.footerLayout.section4.setOnClickListener{
+            val intent = Intent(this@WhichModel, Profile::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
 
 

@@ -5,5 +5,13 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.HeartApp" parent="Base.Theme.HeartApp" />
+    <style name="Theme.HeartApp" parent="Base.Theme.HeartApp" />,
+
+    <style name="Theme.SplashScreen." parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/my_blue</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/kalpicon</item>
+
+    
+        
+    </style>
 </resources>

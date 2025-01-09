@@ -294,7 +294,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:text="sehir buraya"
+                                    android:text="acıklama"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -361,7 +361,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:text="sehir buraya"
+                                    android:text="acıklama"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -434,7 +434,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:text="sehir buraya"
+                                    android:text="acıklama"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -501,7 +501,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:text="sehir buraya"
+                                    android:text="acıklama"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -575,7 +575,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:text="sehir buraya"
+                                    android:text="acıklama"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -642,7 +642,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="80"
-                                    android:text="sehir buraya"
+                                    android:text="acıklama"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />

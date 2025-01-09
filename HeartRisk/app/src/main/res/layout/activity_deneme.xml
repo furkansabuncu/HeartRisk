@@ -151,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:contentDescription="TODO"
-        android:src="@drawable/heart"
+        android:src="@drawable/heartselected"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

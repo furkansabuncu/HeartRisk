@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="Çıkış Yap"
                 android:textColor="@android:color/white"
+                android:backgroundTint="@color/my_blue"
                 android:layout_marginTop="24dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
